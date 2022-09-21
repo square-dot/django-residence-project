@@ -1,0 +1,37 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h2>Meals of the day</h2>
+<table id="daymeals", style="width: 80%">
+    <tr>
+        <th>Breakfast</th>
+        <th>Lunch</th>
+        <th>Dinner</th>
+    </tr>
+    <tr>
+        <th>
+            <ul>
+                {% for user in BR %}
+                <li style="list-style-type:none;"><a href="{% url 'user_detail' user.pk %}">{{user.first_name}}
+                        {{user.last_name}}</a></li>
+                {% endfor %}
+            </ul>
+        </th>
+        <th>
+            <ul>
+                {% for user in LU %}
+                <li style="list-style-type:none;"><a href="{% url 'user_detail' user.pk %}">{{user.first_name}}
+                        {{user.last_name}}</a></li>
+                {% endfor %}
+            </ul>
+        </th>
+        <th>
+            <ul>
+                {% for user in DI %}
+                <li style="list-style-type:none;"><a href="{% url 'user_detail' user.pk %}">{{user.first_name}}
+                        {{user.last_name}}</a></li>
+                {% endfor %}
+            </ul>
+        </th>
+    </tr>
+</table>
+{% endblock %}

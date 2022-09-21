@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<p> {{ meals_form.date.value }} </p>
+<form action="{% url 'day_view' %}" method="post">
+    {% csrf_token %}
+    <p> {{ meals_form.date }} </p>
+    {{ meals_form.BR }} <br />
+    {{ meals_form.LU }} <br />
+    {{ meals_form.DI }} <br />
+</form>
+{% endblock %}

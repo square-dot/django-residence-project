@@ -1,0 +1,92 @@
+body {
+    background-color: whitesmoke;
+    font-size: 12;
+    font-family: "Arial";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    line-height: 1.5;
+}
+
+content {
+    max-width: 500px;
+    margin: auto;
+}
+
+h1 {
+    color: hsl(210, 10%, 62%);
+    margin-left: 40px;
+    font-weight: 400;
+}
+
+h2 {
+    color: hsl(210, 52%, 30%);
+    margin-left: 40px;
+    font-weight: 400;
+}
+
+/* unvisited link */
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: blue;
+}
+
+table#weektable {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px black solid;
+}
+
+table#weektable th {
+    background-color: rgb(114, 149, 114);
+    padding: 5px;
+}
+
+table#weektable td {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+table#weektable caption {
+    font-style: italic;
+}
+
+#weektable th,
+#weektable td {
+    text-align: center;
+}
+
+#daymeals {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table#daymeals td,
+table#daymeals th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#daymeals tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#daymeals tr:hover {
+    background-color: #ddd;
+}
+
+#daymeals th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}

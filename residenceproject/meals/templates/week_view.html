@@ -1,0 +1,138 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<table id="weektable">
+    <tr>
+        <th> Lunch </th>
+        <th> Dinner </th>
+    </tr>
+    <tr>
+        <td>
+            <form action="{% url 'week_view' %}" method="post">
+                {% csrf_token %}
+                {{ bulk_lunches }}
+                <input type="submit" value="All lunches" name="bulk_pick">
+            </form>
+        </td>
+        <td> 
+            <form action="{% url 'week_view' %}" method="post">
+                {% csrf_token %}
+                {{ bulk_dinners }}
+                <input type="submit" value="All dinners" name="bulk_pick">
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"> {{ monday_form.date.value }} </td>
+    </tr>
+    <tr>
+        <div class="row">
+            <form action="{% url 'week_view' %}" method="post">
+                {% csrf_token %}
+                <td>
+                    {{ monday_form.date }} {{ monday_form.LU }}
+                </td>
+                <td>
+                    {{ monday_form.DI }}
+                </td>
+            </form>
+        </div>
+    </tr>
+    <tr>
+        <td colspan="2"> {{ tuesday_form.date.value }} </td>
+    </tr>
+    <tr>
+        <div class="row">
+            <form action="{% url 'week_view' %}" method="post">
+                {% csrf_token %}
+                <td>
+                    {{ tuesday_form.date }} {{ tuesday_form.LU }}
+                </td>
+                <td>
+                    {{ tuesday_form.DI }}
+                </td>
+            </form>
+        </div>
+    </tr>
+    <tr>
+        <td colspan="2"> {{ wednesday_form.date.value }} </td>
+    </tr>
+    <tr>
+        <div class="row">
+            <form action="{% url 'week_view' %}" method="post">
+                {% csrf_token %}
+                <td>
+                    {{ wednesday_form.date }} {{ wednesday_form.LU }}
+                </td>
+                <td>
+                    {{ wednesday_form.DI }}
+                </td>
+            </form>
+        </div>
+    </tr>
+    <tr>
+        <td colspan="2"> {{ thursday_form.date.value }} </td>
+    </tr>
+    <tr>
+        <div class="row">
+            <form action="{% url 'week_view' %}" method="post">
+                {% csrf_token %}
+                <td>
+                    {{ thursday_form.date }} {{ thursday_form.LU }}
+                </td>
+                <td>
+                    {{ thursday_form.DI }}
+                </td>
+            </form>
+        </div>
+    </tr>
+    <tr>
+        <td colspan="2"> {{ friday_form.date.value }} </td>
+    </tr>
+    <tr>
+        <div class="row">
+            <form action="{% url 'week_view' %}" method="post">
+                {% csrf_token %}
+                <td>
+                    {{ friday_form.date }} {{ friday_form.LU }}
+                </td>
+                <td>
+                    {{ friday_form.DI }}
+                </td>
+            </form>
+        </div>
+    </tr>
+    <tr>
+        <td colspan="2"> {{ saturday_form.date.value }} </td>
+    </tr>
+    <tr>
+        <div class="row">
+            <form action="{% url 'week_view' %}" method="post">
+                {% csrf_token %}
+                <td>
+                    {{ saturday_form.date }} {{ saturday_form.LU }}
+                </td>
+                <td>
+                    {{ saturday_form.DI }}
+                </td>
+            </form>
+        </div>
+    </tr>
+    <tr>
+        <td colspan="2"> {{ sunday_form.date.value }} </td>
+    </tr>
+    <tr>
+        <div class="row">
+            <form action="{% url 'week_view' %}" method="post">
+                {% csrf_token %}
+                <td>
+                    {{ sunday_form.date }} {{ sunday_form.LU }}
+                </td>
+                <td>
+                    {{ sunday_form.DI }}
+                </td>
+            </form>
+        </div>
+    </tr>
+    </div>
+</table>
+{% endblock %}
